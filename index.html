@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/yegor256/tacit/gh-pages/tacit-0.8.1.min.css"/>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+    </script>
+    <style>
+        .font {
+            font-size: 150%;
+        }
+    </style>
+    <title>Laba 7</title>
+</head>
+<body>
+
+<div>Duis te feugifacilisi</div>
+<br>
+<hr>
+<div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem
+    nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat.
+    Ut wisis enim ad minim veniam, quis nostrud exerci tution ullamcorper suscipit
+    lobortis nisl ut aliquip ex ea commodo consequat.
+</div>
+
+<script>
+    $('body').on('click', () => {
+        $('div').each(function () {
+            $(this).toggleClass('font');
+        })
+    })
+</script>
+</body>
+</html>

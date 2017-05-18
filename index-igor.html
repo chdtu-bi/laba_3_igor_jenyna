@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/yegor256/tacit/gh-pages/tacit-0.8.1.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.8.0/jquery.modal.min.css"/>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.8.0/jquery.modal.min.js"></script>
+    <title>Title</title>
+
+</head>
+<body>
+
+<div class="main">
+    <span class="helloMessage">Hello</span>
+    <br>
+    <a href="#modalHello" rel="modal:open">
+        <button class="ok" id="ok" type="submit">ok</button>
+    </a>
+</div>
+
+<div id="modalHello" style="display:none;">
+    <p>Hello again</p>
+</div>
+
+<script>
+    $('.ok').on('click', () => {
+        let modalHello = $('#modalHello');
+        if (modalHello.attr('style') !== 'display:none') {
+            let margin = 50;
+            let t = setInterval(() => {
+                margin += 50;
+                modalHello.attr('style', 'margin-top: ' + margin + 'px');
+                if (margin >= $(window).height()) {
+                    clearInterval(t);
+                    modalHello.attr('style', 'margin-top: 0px')
+                }
+            }, 5000)
+        }
+    })
+</script>
+</body>
+</html>
